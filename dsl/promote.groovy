@@ -37,15 +37,9 @@ project pluginName, {
 	property "v_example8", description: "Flot Charting"
 	property "v_example9", description: "An empty page."
 	property "v_examplea", description: "DSL"
- 
 
- 
-	
 	loadProcedures(pluginDir, pluginKey, pluginName, stepsWithAttachedCredentials)
-	
-	
-	
-	
+
 	//plugin configuration metadata
 	property 'ec_config', {
 		form = '$[' + "/projects/${pluginName}/procedures/CreateConfiguration/ec_parameterForm]"
