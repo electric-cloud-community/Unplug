@@ -1,3 +1,8 @@
+<!--
+
+-->
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -22,7 +27,7 @@
         </p>
 	<h1>Display</h1>
 	<p>In order to display the content of your properties, they should be created under /server/unplug. For your convenience
-		properties v, v0 to v9, va to vz have already been created. You can display their content with @PLUGIN_KEY@ by pointing your
+		properties v, v0 to v9, va to vz have alrteady been created. You can display their content with Unplug by pointing your
 		browser to
 		<table border="1">
 			<tr><th>Property</th><th>URL</th></tr>
@@ -68,11 +73,11 @@
         <div id="views">
 			<h2>Views</h2>
 				<p>
-					Promoting the plugin installs an "@PLUGIN_KEY@" menu root in the Flow
-					UI which includes menu items for all @PLUGIN_KEY@ view (v0-vz). The menu
+					Promoting the plugin installs an "Unplug" menu root in the Flow
+					UI which includes menu items for all Unplug view (v0-vz). The menu
 					item labels are a combination of the view name and view parameter
-					description. To refresh the @PLUGIN_KEY@ menu in Flow, run the unplug plugin procedure,
-					"Add @PLUGIN_KEY@ to Flow Menu"
+					description. To refresh the Unplug menu in Flow, run the unplug plugin procedure,
+					"Add Unplug to Flow Menu"
 				</p>
         </div>
         <div id="contenttype">
@@ -122,7 +127,10 @@
 				DSL code is identified by the presence the string //dsl on the first
 				line.  In this case, the expanded property value
 				is executed using the ec-perl Electric FLow API evalDsl() statement,
-				and the script is expected to output HTML code.
+				and the script is expected to output HTML code. URL parameters can be accessed
+				using the args data structure, for example, the parameters in the URL, 
+				pages/unplug/un_run1?myparam=123&amp;secondparam=abc can be access in the dsl code
+				using args.myparam and args.secondparam.
 			</p>
         </div>
 		<div id="text">
@@ -250,16 +258,27 @@
 				this case the DSL command getProjects() is used to create a table
 				listing of projects.
 			</p>
+			<h4><a href="../@PLUGIN_KEY@/un_runb?in1=123&amp;in2=abc">Example b - DSL with URL parameters</a></h4>
+			<p>
+				<code>/plugins/@PLUGIN_KEY@/project/v_exampleb</code>
+			</p>
+			<p>
+				Example a demonstrates how to pass URL parameters to DSL.
+			</p>
 		</div>
 
 		<h1 id="rns">Release Notes</h1>
+		<h2>@PLUGIN_KEY@-2.3.0</h2>
+		<ul>
+			<li>Pass URL parameters to DSL</li>
+		</ul>
 		<h2>@PLUGIN_KEY@-2.2.1</h2>
 		<ul>
 			<li>Format at Help according to EC plugin standards</li>
 		</ul>
 		<h2>@PLUGIN_KEY@-2.2.0</h2>
 		<ul>
-			<li>Add @PLUGIN_KEY@ pages to Flow menu</li>
+			<li>Add Unplug pages to Flow menu</li>
 		</ul>
 		<h2>@PLUGIN_KEY@-2.1.0</h2>
 		<ul>

@@ -11,6 +11,7 @@ use XML::Parser;
 use XML::XPath;
 use URI::Escape;
 use CGI;
+use JSON;
 
 use utf8;
 ElectricCommander::initEncodings();
@@ -98,8 +99,13 @@ if ($c=~ m|^\s*\<.*xhtml.*\>|i) {
 } elsif ($c=~ m|^\s*//.*dsl|i) {
 	# Create a Commander API handle
     my $ec = ElectricCommander->new({'abortOnError'=>0});
+	
+	# Create JSON from cgi parameters
+	my %params = map { $_ => scalar $cgi->url_param($_) } $cgi->url_param() ;
+	my $params_json = encode_json \%params;
+	
     # Run the DSL code
-	my $dslResponse = $ec->evalDsl("$v")->findvalue('/responses')->value();
+	my $dslResponse = $ec->evalDsl("$v",{parameters=>$params_json})->findvalue('/responses')->value();
 	# Trim everything after </html>
 	foreach my $line (split /^/m, $dslResponse) {
 	   $HTML .= $line;
