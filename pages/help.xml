@@ -1,8 +1,3 @@
-<!--
-
--->
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -27,7 +22,7 @@
         </p>
 	<h1>Display</h1>
 	<p>In order to display the content of your properties, they should be created under /server/unplug. For your convenience
-		properties v, v0 to v9, va to vz have alrteady been created. You can display their content with Unplug by pointing your
+		properties v, v0 to v9, va to vz have already been created. You can display their content with @PLUGIN_KEY@ by pointing your
 		browser to
 		<table border="1">
 			<tr><th>Property</th><th>URL</th></tr>
@@ -73,11 +68,11 @@
         <div id="views">
 			<h2>Views</h2>
 				<p>
-					Promoting the plugin installs an "Unplug" menu root in the Flow
-					UI which includes menu items for all Unplug view (v0-vz). The menu
+					Promoting the plugin installs an "@PLUGIN_KEY@" menu root in the Flow
+					UI which includes menu items for all @PLUGIN_KEY@ view (v0-vz). The menu
 					item labels are a combination of the view name and view parameter
-					description. To refresh the Unplug menu in Flow, run the unplug plugin procedure,
-					"Add Unplug to Flow Menu"
+					description. To refresh the @PLUGIN_KEY@ menu in Flow, run the unplug plugin procedure,
+					"Add @PLUGIN_KEY@ to Flow Menu"
 				</p>
         </div>
         <div id="contenttype">
@@ -264,7 +259,7 @@
 		</ul>
 		<h2>@PLUGIN_KEY@-2.2.0</h2>
 		<ul>
-			<li>Add Unplug pages to Flow menu</li>
+			<li>Add @PLUGIN_KEY@ pages to Flow menu</li>
 		</ul>
 		<h2>@PLUGIN_KEY@-2.1.0</h2>
 		<ul>
