@@ -50,9 +50,9 @@
   </customTypes>
   <depends>EC-Core</depends>
   <depends min="1.4.1">EC-PluginManager</depends>
-  <description>A flexible plugin to display the content of proeprties in different formats.</description>
+  <description>A plugin for creating custom views from ElectricFlow content</description>
   <help>help.xml</help>
   <key>unplug</key>
   <label>unplug</label>
-  <version>2.3.1</version>
+  <version>2.3.2</version>
 </plugin>
