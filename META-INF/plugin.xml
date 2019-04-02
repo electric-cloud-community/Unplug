@@ -49,7 +49,7 @@
     </customType>
   </customTypes>
   <depends>EC-Core</depends>
-  <depends min="1.4.1">EC-PluginManager</depends>
+  <depends min="1.4.2">EC-PluginManager</depends>
   <description>A plugin for creating custom views from ElectricFlow content</description>
   <help>help.xml</help>
   <key>unplug</key>
