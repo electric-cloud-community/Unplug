@@ -1,4 +1,4 @@
-# Unplug
+# unplug
 _An Essential Tool for Rapid Plugin Development_
 
 ## Overview
@@ -15,12 +15,12 @@ speed learning about ElectricCommander plugins and how they work.
   Download the plugin jar file, then install and promote the plugin in
 the normal fashion.  Once promoted, click on your user name (in the
 upper right corner of the Commander Web UI), and select "Edit Settings"
-on your User Details page.  Select "Unplug View" from the "Tab View"
+on your User Details page.  Select "unplug View" from the "Tab View"
 list box, and click "OK".  A new sub-tab (named "Un") should appear
 beneath your normal Home tab in the UI.
 
-There are procedures provided to add Unplug pages to the Flow and Commander
-UIs. These procedures add all the examples in the Unplug plugin plus any
+There are procedures provided to add unplug pages to the Flow and Commander
+UIs. These procedures add all the examples in the unplug plugin plus any
 user-created ones saved to the properties /server/unplug/{v,v0-9,va-z}.
 
 ## build
