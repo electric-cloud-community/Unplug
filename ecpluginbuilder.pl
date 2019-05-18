@@ -14,7 +14,7 @@ my $ec = new ElectricCommander->new();
 
 my $epb="../ecpluginbuilder";
 
-my $pluginVersion = "2.3.2";
+my $pluginVersion = "2.3.3";
 my $pluginKey = "unplug";
 
 GetOptions ("version=s" => \$pluginVersion)
@@ -57,31 +57,9 @@ print "    ";
 # 	KeepRoot   => 1,
 # );
 
-foreach my $var ("", 0 .. 9, "a" .. "z") {
-  print "$var ";
-	my $xmlFile="pages/un_run${var}.xml";
+#foreach my $var ("", 0 .. 9, "a" .. "z") {
+  # print "$var ";
 	# my $template="template/un_run.xml";
-	open(my $fh, '>', $xmlFile) or die "Could not write file '$xmlFile' $!";
-
-	print $fh "<componentContainer>\n";
-	print $fh "  <helpLink>help</helpLink>\n";
-	print $fh "  <title>$pluginKey $pluginVersion</title>\n";
-	print $fh "  <component plugin=\"EC-Core\" ref=\"urlLoader\">\n";
-	print $fh "    <style>../../lib/styles/data.css</style>\n";
-	print $fh "    <plugin>unplug</plugin>\n";
-	print $fh "    <version>$pluginVersion</version>\n";
-	print $fh "    <evalScripts>true</evalScripts>\n";
-	print $fh "    <url>cgi-bin/un.cgi</url>\n";
-	print $fh "    <requests>\n";
-	print $fh "      <request requestId=\"v\">\n";
-	print $fh "        <getProperty>\n";
-	print $fh "          <propertyName>/javascript getProperty(&quot;/server/${pluginKey}/v${var}&quot;)</propertyName>\n";
-	print $fh "        </getProperty>\n";
-	print $fh "      </request>\n";
-	print $fh "    </requests>\n";
-	print $fh "  </component>\n";
-	print $fh "</componentContainer>\n";
-	close $fh;
 
 	# Update un_runXXX.xml with key, version, label, description
 	# Bug cannot change the <plugin> attribute, it's confused with the element in <component plugin="EC-Core">
@@ -97,7 +75,7 @@ foreach my $var ("", 0 .. 9, "a" .. "z") {
 	# open(my $fh, '>', $xmlFile) or die "Could not write file '$xmlFile' $!";
 	# print $fh $xs->XMLout($ref);
 	# close $fh;
-}
+#}
 print "\n";
 
 
@@ -112,8 +90,8 @@ system ("$epb -pack-jar -plugin-name $pluginKey -plugin-version $pluginVersion "
 move("build/${pluginKey}.jar", ".");
 
 # Uninstall old plugin
-print "[INFO] - Uninstalling old plugin...\n";
-$ec->uninstallPlugin($pluginKey) || print "No old plugin\n";
+# print "[INFO] - Uninstalling old plugin...\n";
+# $ec->uninstallPlugin($pluginKey) || print "No old plugin\n";
 
 # Install plugin
 print "[INFO] - Installing plugin ${pluginKey}.jar...\n";
