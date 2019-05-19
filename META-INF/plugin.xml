@@ -2,7 +2,6 @@
   <author>Electric Cloud</author>
   <authorUrl>http://www.electric-cloud.com</authorUrl>
   <category>Other</category>
-  <pluginWizardBased>true</pluginWizardBased>
   <commander-version min="6.0" />
   <customTypes>
     <customType name="unRunProcedure">
@@ -54,5 +53,6 @@
   <help>help.xml</help>
   <key>unplug</key>
   <label>unplug</label>
-  <version>2.3.3</version>
+  <pluginWizardBased>true</pluginWizardBased>
+  <version>2.3.4</version>
 </plugin>
